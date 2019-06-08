@@ -30,6 +30,7 @@ To build, you need the following libraries in <u>libs/</u> folder after extracti
   - Don't forget to copy <u>config.h</u> file from <u>assimp/build/</u> directory to <u>assimp/include/</u> directory after building Assimp.
 - [FMOD](https://www.fmod.com/) 1.10.11
   - Don't forget to copy FMOD runtime dlls to <u>bin/</u> directory.
+  - Please read FMOD license to make sure you follow their guidelines.
 
 To place library files please refer to project configuration to see the folder structure.
 
