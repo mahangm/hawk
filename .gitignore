@@ -1,0 +1,13 @@
+bin
+data/models
+data/skybox
+data/sounds
+docs
+libs/assimp
+libs/fmod
+libs/glfw
+libs/gli
+libs/glm
+libs/stb
+misc
+tools
