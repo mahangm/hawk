@@ -22,13 +22,13 @@ Project is built as a static library so developers can have as many projects as 
 
 To build, you need the following libraries in <u>libs/</u> folder after extracting project files. All libraries must be their x64 kind with debug and release files. Also library versions which this project was built against are mentioned here as well.
 
-- GLFW 3.2.1
-- GLM 0.9.9.3
-- GLI 0.8.3.0
-- STB (mainly for stb_image)
-- Assimp 4.1.0 (Static library compiled with usual importers and no exporter)
+- [GLFW](https://github.com/glfw/glfw) 3.2.1
+- [GLM](https://github.com/g-truc/glm) 0.9.9.3
+- [GLI](https://github.com/g-truc/gli) 0.8.3.0
+- [stb](https://github.com/nothings/stb) (mainly for stb_image)
+- [Assimp](https://github.com/assimp/assimp) 4.1.0 (Static library compiled with usual importers and no exporter)
   - Don't forget to copy <u>config.h</u> file from <u>assimp/build/</u> directory to <u>assimp/include/</u> directory after building Assimp.
-- FMOD 1.10.11
+- [FMOD](https://www.fmod.com/) 1.10.11
   - Don't forget to copy FMOD runtime dlls to <u>bin/</u> directory.
 
 To place library files please refer to project configuration to see the folder structure.
@@ -39,8 +39,9 @@ There are three build configurations:
 - Development: Usual debug config with few tweaks.
 - Release: Usual release config with few performance tweaks.
 
-
 Don't forget to set Demo project as the start up project!
+
+Note: Sponza files are not provided in this repo, you can obtain them from [Cell](https://github.com/JoeyDeVries/Cell) project.
 
 
 
@@ -190,7 +191,7 @@ Don't forget to set Demo project as the start up project!
 
 ### To Do
 
-This is a work in progress and lots of things are missing.
+This is a work in progress and I don't have enough time and man power so lots of things are missing.
 
 - Overall optimization for CPU and GPU.
 - Order independent transparency. Color blending is buggy right now.
