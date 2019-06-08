@@ -219,7 +219,7 @@ This is a work in progress and lots of things are missing.
 
 
 
-### Known Bugs and Mysteries
+## Known Bugs and Mysteries
 
 - SSAO should be applied after tone mapping.
 - Drawing skybox after all objects gives early depth testing advantage, but transparent objects would have incorrect color blend.
