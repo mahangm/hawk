@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C8BFC370-1AA5-47F8-9E1D-A4C6D784F907}</ProjectGuid>
+    <RootNamespace>hawk</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Platform)_$(Configuration)</TargetName>
+    <IncludePath>..\libs\fmod\include;..\libs\assimp\include;..\libs\gli;..\libs\glm;..\libs\glad\include;..\libs\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs\fmod\lib\debug;..\libs\assimp\lib\debug;..\libs\glfw\lib\debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Platform)_$(Configuration)</TargetName>
+    <IncludePath>..\libs\fmod\include;..\libs\assimp\include;..\libs\gli;..\libs\glm;..\libs\glad\include;..\libs\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs\fmod\lib\debug;..\libs\assimp\lib\debug;..\libs\glfw\lib\debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Platform)_$(Configuration)</TargetName>
+    <IncludePath>..\libs\fmod\include;..\libs\assimp\include;..\libs\gli;..\libs\glm;..\libs\glad\include;..\libs\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs\fmod\lib\release;..\libs\assimp\lib\release;..\libs\glfw\lib\release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc140-mt.lib;IrrXML.lib;zlibstaticd.lib;fmodL64_vc.lib;fmodstudioL64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>DEVELOPMENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc140-mt.lib;IrrXML.lib;zlibstaticd.lib;fmodL64_vc.lib;fmodstudioL64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc140-mt.lib;IrrXML.lib;zlibstatic.lib;fmod64_vc.lib;fmodstudio64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\libs\glad\src\glad.c" />
+    <ClCompile Include="assets\sound.cpp" />
+    <ClCompile Include="components\audio_listener.cpp" />
+    <ClCompile Include="components\audio_player.cpp" />
+    <ClCompile Include="components\audio_reverb_zone.cpp" />
+    <ClCompile Include="components\mesh_renderer.cpp" />
+    <ClCompile Include="assets\asset.cpp" />
+    <ClCompile Include="components\component.cpp" />
+    <ClCompile Include="components\renderer.cpp" />
+    <ClCompile Include="components\transform.cpp" />
+    <ClCompile Include="managers\assets.cpp" />
+    <ClCompile Include="components\camera.cpp" />
+    <ClCompile Include="system\core.cpp" />
+    <ClCompile Include="objects\entity.cpp" />
+    <ClCompile Include="managers\audio.cpp" />
+    <ClCompile Include="managers\input.cpp" />
+    <ClCompile Include="components\light.cpp" />
+    <ClCompile Include="managers\logger.cpp" />
+    <ClCompile Include="assets\material.cpp" />
+    <ClCompile Include="assets\mesh.cpp" />
+    <ClCompile Include="assets\model.cpp" />
+    <ClCompile Include="managers\manager.cpp" />
+    <ClCompile Include="managers\scene.cpp" />
+    <ClCompile Include="assets\shader.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="assets\texture.cpp" />
+    <ClCompile Include="managers\time.cpp" />
+    <ClCompile Include="managers\video.cpp" />
+    <ClCompile Include="assets\framebuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libs\stb\stb_image.h" />
+    <ClInclude Include="hawk.hpp" />
+    <ClInclude Include="assets\asset.hpp" />
+    <ClInclude Include="assets\material.hpp" />
+    <ClInclude Include="assets\mesh.hpp" />
+    <ClInclude Include="assets\model.hpp" />
+    <ClInclude Include="assets\shader.hpp" />
+    <ClInclude Include="assets\sound.hpp" />
+    <ClInclude Include="assets\texture.hpp" />
+    <ClInclude Include="components\audio_listener.hpp" />
+    <ClInclude Include="components\audio_player.hpp" />
+    <ClInclude Include="components\audio_reverb_zone.hpp" />
+    <ClInclude Include="components\camera.hpp" />
+    <ClInclude Include="components\component.hpp" />
+    <ClInclude Include="components\light.hpp" />
+    <ClInclude Include="components\mesh_renderer.hpp" />
+    <ClInclude Include="components\renderer.hpp" />
+    <ClInclude Include="components\transform.hpp" />
+    <ClInclude Include="system\core.hpp" />
+    <ClInclude Include="managers\assets.hpp" />
+    <ClInclude Include="managers\audio.hpp" />
+    <ClInclude Include="managers\input.hpp" />
+    <ClInclude Include="managers\logger.hpp" />
+    <ClInclude Include="managers\manager.hpp" />
+    <ClInclude Include="managers\scene.hpp" />
+    <ClInclude Include="managers\time.hpp" />
+    <ClInclude Include="managers\video.hpp" />
+    <ClInclude Include="objects\entity.hpp" />
+    <ClInclude Include="helpers\file_system.hpp" />
+    <ClInclude Include="helpers\math.hpp" />
+    <ClInclude Include="helpers\memory.hpp" />
+    <ClInclude Include="helpers\strings.hpp" />
+    <ClInclude Include="assets\framebuffer.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
