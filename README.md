@@ -6,7 +6,7 @@ Hawk is a humble attempt to provide a general purpose game engine.
 
 Brief features are, component based hierarchal entity system, physically based rendering, deferred shading, FMOD implementation, asset manager, frame/time manager, debug context, logging ...
 
-You can watch a video demonstration of rendering Sponza here https://youtu.be/zJNhhMViDrg
+You can watch a video demonstration of rendering Sponza here https://youtu.be/NdeIqPZPhG4
 
 Please do note that this is a work in progress.
 
