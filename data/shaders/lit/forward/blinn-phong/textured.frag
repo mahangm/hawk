@@ -111,6 +111,9 @@ void main()
 	// ambient
 	vec4 ambient_color = video.ambient * diffuse_color;
 
+	// discard full transparent fragments
+	if (diffuse_color.a <= 0.01f) discard;
+	
 	// default color buffer output
 	gl_FragColor = ambient_color + lighting;
 }
