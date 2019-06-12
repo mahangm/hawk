@@ -18,21 +18,29 @@ For a full list of features and properties please read below.
 
 Build files are provided for Visual Studio 2017. 
 
-Project is built as a static library so developers can have as many projects as they want just so by linking to this library. Demo project is a good example of how you can setup a project properly.
+Hawk is built as a static library so developers can have as many projects as they want just so by linking to this library. Demo project is a good example of how you can setup a project properly.
 
-To build, you need the following libraries in <u>libs/</u> folder after extracting project files. All libraries must be their x64 kind with debug and release files. Also library versions which this project was built against are mentioned here as well.
+To build, you need the following libraries in <u>libs/</u> folder after extracting project files. All libraries must be their x64 kind with debug and release files and they are all statically linked except FMOD. Also library versions which this project was built against are mentioned here as well.
 
 - [GLFW](https://github.com/glfw/glfw) 3.2.1
 - [GLM](https://github.com/g-truc/glm) 0.9.9.3
 - [GLI](https://github.com/g-truc/gli) 0.8.3.0
 - [stb](https://github.com/nothings/stb) (mainly for stb_image)
-- [Assimp](https://github.com/assimp/assimp) 4.1.0 (Static library compiled with usual importers and no exporter)
+- [Assimp](https://github.com/assimp/assimp) 4.1.0 (usual importers and no exporter)
   - Don't forget to copy <u>config.h</u> file from <u>assimp/build/</u> directory to <u>assimp/include/</u> directory after building Assimp.
 - [FMOD](https://www.fmod.com/) 1.10.11
   - Don't forget to copy FMOD runtime dlls to <u>bin/</u> directory.
   - Please read FMOD license to make sure you follow their guidelines.
 
-To place library files please refer to project configuration to see the folder structure.
+Each library inside <u>libs/</u> folder is structured as follow:
+
+- lib-name/
+  - include/
+  - lib/
+    - debug/
+    - release/
+
+Please refer to project configuration to see the complete folder structure.
 
 There are three build configurations:
 
@@ -43,6 +51,17 @@ There are three build configurations:
 Don't forget to set Demo project as the start up project!
 
 Note: Sponza files are not provided in this repo, you can obtain them from [Cell](https://github.com/JoeyDeVries/Cell) project.
+
+
+
+## Tools
+
+These tools were used to aid development:
+
+- [BRDFGenerator](https://github.com/HectorMF/BRDFGenerator): Used to make BRDF look up texture.
+- [cmftStudio](https://github.com/dariomanesku/cmftStudio): Used to transform hdr files to skybox, radiance and irradiance maps face lists.
+- [glslang](https://github.com/KhronosGroup/glslang): Used to verify shaders validity over all platforms.
+- [hdrihaven.com](https://hdrihaven.com/): Used for their amazing hdr images.
 
 
 
@@ -190,7 +209,7 @@ Note: Sponza files are not provided in this repo, you can obtain them from [Cell
 
 
 
-### To Do
+## To Do
 
 This is a work in progress and I don't have enough time and man power so lots of things are missing.
 
