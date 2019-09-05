@@ -214,6 +214,7 @@ These tools were used to aid development:
 This is a work in progress and I don't have enough time and man power so lots of things are missing.
 
 - Overall optimization for CPU and GPU.
+  - Gather components in flat lists to execute events instead of recursive traverse of entities.
 - Order independent transparency. Color blending is buggy right now.
 - Number of lights optimization using light volumes in deferred render.
 - Reflection probes.
@@ -249,3 +250,4 @@ This is a work in progress and I don't have enough time and man power so lots of
 - For some reason, shadow bias displaces directional shadows in deferred shading. Had to remove it.
 - Forward lit shaders used to randomly crash on link. Something to do with dynamic indexing of forward lights array to calculate fragment light position in vertex shader. Moved calculations to fragment shader and compromised performance.
 - Wavefront .obj files store normal maps as both height and displacement :| had to remove displacement texture loading from model load.
+- Convert parent/child relation to Transform component?
