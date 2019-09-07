@@ -12,8 +12,6 @@ Please do note that this is a work in progress.
 
 For a full list of features and properties please read below.
 
-
-
 ## Build
 
 Build files are provided for Visual Studio 2017. 
@@ -52,8 +50,6 @@ Don't forget to set Demo project as the start up project!
 
 Note: Sponza files are not provided in this repo, you can obtain them from [Cell](https://github.com/JoeyDeVries/Cell) project.
 
-
-
 ## Tools
 
 These tools were used to aid development:
@@ -63,8 +59,6 @@ These tools were used to aid development:
 - [glslang](https://github.com/KhronosGroup/glslang): Used to verify shaders validity over all platforms.
 - [hdrihaven.com](https://hdrihaven.com/): Used for their amazing hdr images.
 
-
-
 ## Features
 
 ### General
@@ -73,8 +67,6 @@ These tools were used to aid development:
 - Modern OpenGL (4.6).
 - Callbacks for scripting events in C++.
 - Asset hot loading.
-
-
 
 ### Managers
 
@@ -120,8 +112,6 @@ These tools were used to aid development:
 - Logger
   - Logging system with file and console output.
 
-
-
 ### Assets
 
 - Mesh
@@ -151,8 +141,6 @@ These tools were used to aid development:
   - Importing common audio file formats in 2D or 3D using FMOD.
   - Support for streamed, in-memory or uncompressed methods.
 
-
-
 ### Components
 
 - Transform
@@ -180,16 +168,12 @@ These tools were used to aid development:
 - Audio Reverb Zone
   - Spherical reverb zone with minimum and maximum range.
 
-
-
 ### Entity
 
 - Hierarchal component-based entity system.
 - Instantiation and immediate/post-pone destruction.
 - Enable/Disable.
 - Static entities for optimization.
-
-
 
 ### Helpers
 
@@ -198,16 +182,12 @@ These tools were used to aid development:
 - Memory (copy, zeroize).
 - Strings (tokenize, replace ...).
 
-
-
 ### Other
 
 - Flexible framebuffer to create 2d, cube map, g-buffer, hdr render buffers.
 - Uniform buffer objects for active camera, video properties and forward scene lights.
 - Completely documented (JavaDoc style) for doxygen.
 - Fully logged with OpenGL debug context in Debug builds.
-
-
 
 ## To Do
 
@@ -238,8 +218,6 @@ This is a work in progress and I don't have enough time and man power so lots of
 - Editor.
 - Richer code reference.
 - Wiki.
-
-
 
 ## Known Bugs and Mysteries
 
