@@ -1,5 +1,11 @@
 # Hawk
 
+**This project is being archived due to inactivity, performance issues, poor design and lack of features which leads to difficulties to expand the code base and its practicality.**
+
+**My intention was to release the newer iterations of this project that I was working on under newer names, which have massively improved in terms of performance, software architecture and features, but since I didn't have enough time nor the energy to develop them to a certain point that makes them somewhat eligible for an official development framework, I never bothered to do so.**
+
+**Also, this project was a demonstration of some of my own skills in Game Engine Development which has been a long time passion. I'll probably come back to this field of work at some point in the future, but until then Adios!**
+
 Hawk is a humble attempt to provide a general purpose game engine. 
 
 ![sponza](sponza.jpg)
