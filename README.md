@@ -6,6 +6,8 @@
 
 **Also, this project was a demonstration of some of my own skills in Game Engine Development which has been a long time passion. I'll probably come back to this field of work at some point in the future, but until then Adios!**
 
+------
+
 Hawk is a humble attempt to provide a general purpose game engine. 
 
 ![sponza](sponza.jpg)
